@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table border>
+<thead>
+<tr>
+<th>Event Id</th>
+<th>Event Name</th>
+<th>Event description</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="pl:${event}">
+<td th:text="${es.id}"></td>
+<td th:text="${es.name}"></td>
+<td th:text="${es.description}"></td>
+<td>
+<ul> 
+<li th:each="s:${es.photoslist}" >
+
+
+<source th:src="${s.link}">
+
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
